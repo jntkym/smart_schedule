@@ -1,13 +1,12 @@
 property WeekdayText : {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}
 property YoubiText : {"月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日", "日曜日"}
 
+-- 今日の曜日を日本語で取得する
 on WeekdayToYoubi(day)
     repeat with i from 1 to 7
       if item i of WeekdayText = day as text then return item i of YoubiText
     end repeat
 end WeekdayToYoubi
-
--- TODO: 月末, 年末問題
 
 set Y to year of (current date)
 set M to (month of (current date)) * 1
